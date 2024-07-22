@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="adminpanle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="sidebar">
+      <div class="op">
+        <div class="op1"></div>
+        <div class="op2">
+          <div class="op3">John Devid</div>
+          <div class="op4"> <i class="fa-solid fa-circle fa-xs" style="color: #63E6BE;"></i>Online</div>
+        </div>
+      </div>
+      <div class="one"><b>General</b></div>
+      <div class="BACK"></div>
+      <div class="two">
+        <button>
+          Deshboard</button><i class="fa-solid fa-chevron-up fa-xs"></i>
+      </div>
+      <div class="dechboard1">
+        <div class="db1"><i class="fa-solid fa-chevron-up fa-xs"></i>Defualt Deshboard</div>
+        <div class="db2"><i class="fa-solid fa-chevron-up fa-xs"></i>Deshboard Style 2</div>
+      </div>
+      <div class="three">
+        <button class="three">
+          Widgets
+        </button>
+      </div>
+      <div class="four"><button class="four">Tables</button></div>
+      <div class="five"><button>Apps</button><i class="fa-solid fa-chevron-up fa-xs"></i></div>
+      <div class="dechboard2">
+        <div class="db3"><i class="fa-solid fa-chevron-up fa-xs"></i>Genrel Element</div>
+        <div class="db4"><i class="fa-solid fa-chevron-up fa-xs"></i>Meadia Gellary</div>
+      </div>
+      <div class="six"><button class="six">Calender</button></div>
+      <div class="seven"><button class="seven">Map</button></div>
+      <div class="eight"><button>Addition</button><i class="fa-solid fa-chevron-up fa-xs"></i></div>
+      <div class="dechboard3">
+        <div class="db5"><i class="fa-solid fa-chevron-up fa-xs"></i>E-mail</div>
+        <div class="db6"><i class="fa-solid fa-chevron-up fa-xs"></i>Celender</div>
+      </div>
+
+    </div>
+    <nav>
+      <div class="one1"><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></div>
+      <div class="two2"><img src="logo.png" alt=""></div>
+      <div class="three3"><i class="fa-regular fa-bell fa-2xl" style="color: #ffffff;"></i></div>
+      <div class="four4"><i class="fa-solid fa-circle-question fa-2xl" style="color: #ffffff;"></i></div>
+      <div class="five5"><i class="fa-regular fa-envelope fa-2xl" style="color: #ffffff;"></i></div>
+      <div class="six6">
+        <div class="part1"></div>
+        <div class="part2"><a href="">John Devid </a><i class="fa-solid fa-chevron-up fa-xs"
+            style="color: #ffffff;"></i></div>
+      </div>
+    </nav>
+    <div class="content">
+      <div id="dash1"></div>
+      <div id="dash2"></div>
+    </div>
+    <div class="content2">
+      <div id="dash3"></div>
+      <div id="dash4"></div>
+    </div>
+    <div class="content3">
+      <div id="dash5"></div>
+      <div id="dash6"></div>
+    </div>
+    <div class="content4"></div>
+    <div class="content5">
+      <div id="calender"></div>
+    </div>
+    <div class="content6">
+      <div id="chartdiv"></div>
+    </div>
+    <div class="content7">
+    </div>
+  </div>
+
+
+  <script>
+    $(document).ready(function () {
+      $(".two").click(function () {
+        $(".dechboard1").slideToggle()
+        $(".dechboard2").slideUp()
+        $(".dechboard3").slideUp()
+      })
+    })
+    $(document).ready(function () {
+      $(".five").click(function () {
+        $(".dechboard2").slideToggle()
+        $(".dechboard1").slideUp()
+        $(".dechboard3").slideUp()
+      })
+    })
+    $(document).ready(function () {
+      $(".eight").click(function () {
+        $(".dechboard3").slideToggle()
+        $(".dechboard2").slideUp()
+        $(".dechboard1").slideUp()
+      })
+    })
+    $(document).ready(function () {
+      $(".two").click(function () {
+        $(".content").show()
+        $(".content2").hide()
+        $(".content3").hide()
+        $(".content4").hide()
+        $(".content5").hide()
+        $(".content6").hide()
+        $(".content7").hide()
+
+      })
+      $(".three").click(function () {
+        $(".content").hide()
+        $(".content2").show()
+        $(".content3").hide()
+        $(".content4").hide()
+        $(".content5").hide()
+        $(".content6").hide()
+        $(".content7").hide()
+
+      })
+      $(".four").click(function () {
+        $(".content").hide()
+        $(".content2").hide()
+        $(".content3").show()
+        $(".content4").hide()
+        $(".content5").hide()
+        $(".content6").hide()
+        $(".content7").hide()
+
+      })
+      $(".five").click(function () {
+        $(".content").hide()
+        $(".content2").hide()
+        $(".content3").hide()
+        $(".content4").show()
+        $(".content5").hide()
+        $(".content6").hide()
+        $(".content7").hide()
+
+      })
+      $(".six").click(function () {
+        $(".content").hide()
+        $(".content2").hide()
+        $(".content3").hide()
+        $(".content4").hide()
+        $(".content5").show()
+        $(".content6").hide()
+        $(".content7").hide()
+
+      })
+      $(".seven").click(function () {
+        $(".content").hide()
+        $(".content2").hide()
+        $(".content3").hide()
+        $(".content4").hide()
+        $(".content5").hide()
+        $(".content6").show()
+        $(".content7").hide()
+
+      })
+      $(".eight").click(function () {
+        $(".content").hide()
+        $(".content2").hide()
+        $(".content3").hide()
+        $(".content4").hide()
+        $(".content5").hide()
+        $(".content6").hide()
+        $(".content7").show()
+
+      })
+    })
+    //=========================== graph = 1 ===========================
+    var options = {
+      series: [
+        {
+          name: "High - 2013",
+          data: [28, 29, 33, 36, 32, 32, 33]
+        },
+        {
+          name: "Low - 2013",
+          data: [12, 11, 14, 18, 17, 13, 13]
+        }
+      ],
+      chart: {
+        height: 350,
+        type: 'line',
+        dropShadow: {
+          enabled: true,
+          color: '#000',
+          top: 18,
+          left: 7,
+          blur: 10,
+          opacity: 0.2
+        },
+        zoom: {
+          enabled: false
+        },
+        toolbar: {
+          show: false
+        }
+      },
+      colors: ['#77B6EA', '#545454'],
+      dataLabels: {
+        enabled: true,
+      },
+      stroke: {
+        curve: 'smooth'
+      },
+      title: {
+        text: 'Average High & Low Temperature',
+        align: 'left'
+      },
+      grid: {
+        borderColor: '#e7e7e7',
+        row: {
+          colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+          opacity: 0.5
+        },
+      },
+      markers: {
+        size: 1
+      },
+      xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        title: {
+          text: 'Month'
+        }
+      },
+      yaxis: {
+        title: {
+          text: 'Temperature'
+        },
+        min: 5,
+        max: 40
+      },
+      legend: {
+        position: 'top',
+        horizontalAlign: 'right',
+        floating: true,
+        offsetY: -25,
+        offsetX: -5
+      }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#dash1"), options);
+    chart.render();
+    // ========================================== Graph = 2 ==================================
+
+    var options = {
+      series: [{
+        name: 'Income',
+        type: 'column',
+        data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
+      }, {
+        name: 'Cashflow',
+        type: 'column',
+        data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5]
+      }, {
+        name: 'Revenue',
+        type: 'line',
+        data: [20, 29, 37, 36, 44, 45, 50, 58]
+      }],
+      chart: {
+        height: 350,
+        type: 'line',
+        stacked: false
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: [1, 1, 4]
+      },
+      title: {
+        text: 'XYZ - Stock Analysis (2009 - 2016)',
+        align: 'left',
+        offsetX: 110
+      },
+      xaxis: {
+        categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+      },
+      yaxis: [
+        {
+          seriesName: 'Income',
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: true,
+            color: '#008FFB'
+          },
+          labels: {
+            style: {
+              colors: '#008FFB',
+            }
+          },
+          title: {
+            text: "Income (thousand crores)",
+            style: {
+              color: '#008FFB',
+            }
+          },
+          tooltip: {
+            enabled: true
+          }
+        },
+        {
+          seriesName: 'Cashflow',
+          opposite: true,
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: true,
+            color: '#00E396'
+          },
+          labels: {
+            style: {
+              colors: '#00E396',
+            }
+          },
+          title: {
+            text: "Operating Cashflow (thousand crores)",
+            style: {
+              color: '#00E396',
+            }
+          },
+        },
+        {
+          seriesName: 'Revenue',
+          opposite: true,
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: true,
+            color: '#FEB019'
+          },
+          labels: {
+            style: {
+              colors: '#FEB019',
+            },
+          },
+          title: {
+            text: "Revenue (thousand crores)",
+            style: {
+              color: '#FEB019',
+            }
+          }
+        },
+      ],
+      tooltip: {
+        fixed: {
+          enabled: true,
+          position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+          offsetY: 30,
+          offsetX: 60
+        },
+      },
+      legend: {
+        horizontalAlign: 'left',
+        offsetX: 40
+      }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#dash2"), options);
+    chart.render();
+  </script>
+  <!-------------------------------- Calender --------------------------------->
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calender');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+
+  </script>
+  <!-- ===================================Map================================= -->
+  <script>
+    am5.ready(function () {
+
+      // Create root element
+      // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+      var root = am5.Root.new("chartdiv");
+
+      // Set themes
+      // https://www.amcharts.com/docs/v5/concepts/themes/
+      root.setThemes([
+        am5themes_Animated.new(root)
+      ]);
+
+      // Create the map chart
+      // https://www.amcharts.com/docs/v5/charts/map-chart/
+      var chart = root.container.children.push(
+        am5map.MapChart.new(root, {
+          panX: "rotateX",
+          panY: "none",
+          projection: am5map.geoMercator(),
+        })
+      );
+
+      var cont = chart.children.push(
+        am5.Container.new(root, {
+          layout: root.horizontalLayout,
+          x: 20,
+          y: 40
+        })
+      );
+
+      // Add labels and controls
+      cont.children.push(
+        am5.Label.new(root, {
+          centerY: am5.p50,
+          text: "Map"
+        })
+      );
+
+      var switchButton = cont.children.push(
+        am5.Button.new(root, {
+          themeTags: ["switch"],
+          centerY: am5.p50,
+          icon: am5.Circle.new(root, {
+            themeTags: ["icon"]
+          })
+        })
+      );
+
+      switchButton.on("active", function () {
+        if (!switchButton.get("active")) {
+          chart.set("projection", am5map.geoMercator());
+          chart.set("panY", "translateY");
+          chart.set("rotationY", 0);
+
+          backgroundSeries.mapPolygons.template.set("fillOpacity", 0);
+        } else {
+          chart.set("projection", am5map.geoOrthographic());
+          chart.set("panY", "rotateY");
+          backgroundSeries.mapPolygons.template.set("fillOpacity", 0.1);
+        }
+      });
+
+      cont.children.push(
+        am5.Label.new(root, {
+          centerY: am5.p50,
+          text: "Globe"
+        })
+      );
+
+      // Create series for background fill
+      // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
+      var backgroundSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {}));
+      backgroundSeries.mapPolygons.template.setAll({
+        fill: root.interfaceColors.get("alternativeBackground"),
+        fillOpacity: 0,
+        strokeOpacity: 0
+      });
+
+      // Add background polygon
+      // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/#Background_polygon
+      backgroundSeries.data.push({
+        geometry: am5map.getGeoRectangle(90, 180, -90, -180)
+      });
+
+      // Create main polygon series for countries
+      // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+      var polygonSeries = chart.series.push(
+        am5map.MapPolygonSeries.new(root, {
+          geoJSON: am5geodata_worldLow
+        })
+      );
+
+      // Create line series for trajectory lines
+      // https://www.amcharts.com/docs/v5/charts/map-chart/map-line-series/
+      var lineSeries = chart.series.push(am5map.MapLineSeries.new(root, {}));
+      lineSeries.mapLines.template.setAll({
+        stroke: root.interfaceColors.get("alternativeBackground"),
+        strokeOpacity: 0.3
+      });
+
+      // Create point series for markers
+      // https://www.amcharts.com/docs/v5/charts/map-chart/map-point-series/
+      var pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
+
+      pointSeries.bullets.push(function () {
+        var circle = am5.Circle.new(root, {
+          radius: 4,
+          tooltipY: 0,
+          fill: am5.color(0xffba00),
+          stroke: root.interfaceColors.get("background"),
+          strokeWidth: 2,
+          tooltipText: "{title}"
+        });
+
+        return am5.Bullet.new(root, {
+          sprite: circle
+        });
+      });
+
+      var cities = [
+        {
+          title: "Vienna",
+          latitude: 48.2092,
+          longitude: 16.3728
+        },
+        {
+          title: "Minsk",
+          latitude: 53.9678,
+          longitude: 27.5766
+        },
+        {
+          title: "Brussels",
+          latitude: 50.8371,
+          longitude: 4.3676
+        },
+        {
+          title: "Sarajevo",
+          latitude: 43.8608,
+          longitude: 18.4214
+        },
+        {
+          title: "Sofia",
+          latitude: 42.7105,
+          longitude: 23.3238
+        },
+        {
+          title: "Zagreb",
+          latitude: 45.815,
+          longitude: 15.9785
+        },
+        {
+          title: "Pristina",
+          latitude: 42.666667,
+          longitude: 21.166667
+        },
+        {
+          title: "Prague",
+          latitude: 50.0878,
+          longitude: 14.4205
+        },
+        {
+          title: "Copenhagen",
+          latitude: 55.6763,
+          longitude: 12.5681
+        },
+        {
+          title: "Tallinn",
+          latitude: 59.4389,
+          longitude: 24.7545
+        },
+        {
+          title: "Helsinki",
+          latitude: 60.1699,
+          longitude: 24.9384
+        },
+        {
+          title: "Paris",
+          latitude: 48.8567,
+          longitude: 2.351
+        },
+        {
+          title: "Berlin",
+          latitude: 52.5235,
+          longitude: 13.4115
+        },
+        {
+          title: "Athens",
+          latitude: 37.9792,
+          longitude: 23.7166
+        },
+        {
+          title: "Budapest",
+          latitude: 47.4984,
+          longitude: 19.0408
+        },
+        {
+          title: "Reykjavik",
+          latitude: 64.1353,
+          longitude: -21.8952
+        },
+        {
+          title: "Dublin",
+          latitude: 53.3441,
+          longitude: -6.2675
+        },
+        {
+          title: "Rome",
+          latitude: 41.8955,
+          longitude: 12.4823
+        },
+        {
+          title: "Riga",
+          latitude: 56.9465,
+          longitude: 24.1049
+        },
+        {
+          title: "Vaduz",
+          latitude: 47.1411,
+          longitude: 9.5215
+        },
+        {
+          title: "Vilnius",
+          latitude: 54.6896,
+          longitude: 25.2799
+        },
+        {
+          title: "Luxembourg",
+          latitude: 49.61,
+          longitude: 6.1296
+        },
+        {
+          title: "Skopje",
+          latitude: 42.0024,
+          longitude: 21.4361
+        },
+        {
+          title: "Valletta",
+          latitude: 35.9042,
+          longitude: 14.5189
+        },
+        {
+          title: "Chisinau",
+          latitude: 47.0167,
+          longitude: 28.8497
+        },
+        {
+          title: "Monaco",
+          latitude: 43.7325,
+          longitude: 7.4189
+        },
+        {
+          title: "Podgorica",
+          latitude: 42.4602,
+          longitude: 19.2595
+        },
+        {
+          title: "Amsterdam",
+          latitude: 52.3738,
+          longitude: 4.891
+        },
+        {
+          title: "Oslo",
+          latitude: 59.9138,
+          longitude: 10.7387
+        },
+        {
+          title: "Warsaw",
+          latitude: 52.2297,
+          longitude: 21.0122
+        },
+        {
+          title: "Lisbon",
+          latitude: 38.7072,
+          longitude: -9.1355
+        },
+        {
+          title: "Bucharest",
+          latitude: 44.4479,
+          longitude: 26.0979
+        },
+        {
+          title: "Moscow",
+          latitude: 55.7558,
+          longitude: 37.6176
+        },
+        {
+          title: "San Marino",
+          latitude: 43.9424,
+          longitude: 12.4578
+        },
+        {
+          title: "Belgrade",
+          latitude: 44.8048,
+          longitude: 20.4781
+        },
+        {
+          title: "Bratislava",
+          latitude: 48.2116,
+          longitude: 17.1547
+        },
+        {
+          title: "Ljubljana",
+          latitude: 46.0514,
+          longitude: 14.506
+        },
+        {
+          title: "Madrid",
+          latitude: 40.4167,
+          longitude: -3.7033
+        },
+        {
+          title: "Stockholm",
+          latitude: 59.3328,
+          longitude: 18.0645
+        },
+        {
+          title: "Bern",
+          latitude: 46.948,
+          longitude: 7.4481
+        },
+        {
+          title: "Kiev",
+          latitude: 50.4422,
+          longitude: 30.5367
+        },
+        {
+          title: "London",
+          latitude: 51.5002,
+          longitude: -0.1262
+        },
+        {
+          title: "Gibraltar",
+          latitude: 36.1377,
+          longitude: -5.3453
+        },
+        {
+          title: "Saint Peter Port",
+          latitude: 49.466,
+          longitude: -2.5522
+        },
+        {
+          title: "Douglas",
+          latitude: 54.167,
+          longitude: -4.4821
+        },
+        {
+          title: "Saint Helier",
+          latitude: 49.1919,
+          longitude: -2.1071
+        },
+        {
+          title: "Longyearbyen",
+          latitude: 78.2186,
+          longitude: 15.6488
+        },
+        {
+          title: "Kabul",
+          latitude: 34.5155,
+          longitude: 69.1952
+        },
+        {
+          title: "Yerevan",
+          latitude: 40.1596,
+          longitude: 44.509
+        },
+        {
+          title: "Baku",
+          latitude: 40.3834,
+          longitude: 49.8932
+        },
+        {
+          title: "Manama",
+          latitude: 26.1921,
+          longitude: 50.5354
+        },
+        {
+          title: "Dhaka",
+          latitude: 23.7106,
+          longitude: 90.3978
+        },
+        {
+          title: "Thimphu",
+          latitude: 27.4405,
+          longitude: 89.673
+        },
+        {
+          title: "Bandar Seri Begawan",
+          latitude: 4.9431,
+          longitude: 114.9425
+        },
+        {
+          title: "Phnom Penh",
+          latitude: 11.5434,
+          longitude: 104.8984
+        },
+        {
+          title: "Peking",
+          latitude: 39.9056,
+          longitude: 116.3958
+        },
+        {
+          title: "Nicosia",
+          latitude: 35.1676,
+          longitude: 33.3736
+        },
+        {
+          title: "T'bilisi",
+          latitude: 41.701,
+          longitude: 44.793
+        },
+        {
+          title: "New Delhi",
+          latitude: 28.6353,
+          longitude: 77.225
+        },
+        {
+          title: "Jakarta",
+          latitude: -6.1862,
+          longitude: 106.8063
+        },
+        {
+          title: "Teheran",
+          latitude: 35.7061,
+          longitude: 51.4358
+        },
+        {
+          title: "Baghdad",
+          latitude: 33.3157,
+          longitude: 44.3922
+        },
+        {
+          title: "Jerusalem",
+          latitude: 31.76,
+          longitude: 35.17
+        },
+        {
+          title: "Tokyo",
+          latitude: 35.6785,
+          longitude: 139.6823
+        },
+        {
+          title: "Amman",
+          latitude: 31.9394,
+          longitude: 35.9349
+        },
+        {
+          title: "Astana",
+          latitude: 51.1796,
+          longitude: 71.4475
+        },
+        {
+          title: "Kuwait",
+          latitude: 29.3721,
+          longitude: 47.9824
+        },
+        {
+          title: "Bishkek",
+          latitude: 42.8679,
+          longitude: 74.5984
+        },
+        {
+          title: "Vientiane",
+          latitude: 17.9689,
+          longitude: 102.6137
+        },
+        {
+          title: "Beyrouth / Beirut",
+          latitude: 33.8872,
+          longitude: 35.5134
+        },
+        {
+          title: "Kuala Lumpur",
+          latitude: 3.1502,
+          longitude: 101.7077
+        },
+        {
+          title: "Ulan Bator",
+          latitude: 47.9138,
+          longitude: 106.922
+        },
+        {
+          title: "Pyinmana",
+          latitude: 19.7378,
+          longitude: 96.2083
+        },
+        {
+          title: "Kathmandu",
+          latitude: 27.7058,
+          longitude: 85.3157
+        },
+        {
+          title: "Muscat",
+          latitude: 23.6086,
+          longitude: 58.5922
+        },
+        {
+          title: "Islamabad",
+          latitude: 33.6751,
+          longitude: 73.0946
+        },
+        {
+          title: "Manila",
+          latitude: 14.579,
+          longitude: 120.9726
+        },
+        {
+          title: "Doha",
+          latitude: 25.2948,
+          longitude: 51.5082
+        },
+        {
+          title: "Riyadh",
+          latitude: 24.6748,
+          longitude: 46.6977
+        },
+        {
+          title: "Singapore",
+          latitude: 1.2894,
+          longitude: 103.85
+        },
+        {
+          title: "Seoul",
+          latitude: 37.5139,
+          longitude: 126.9828
+        },
+        {
+          title: "Colombo",
+          latitude: 6.9155,
+          longitude: 79.8572
+        },
+        {
+          title: "Damascus",
+          latitude: 33.5158,
+          longitude: 36.2939
+        },
+        {
+          title: "Taipei",
+          latitude: 25.0338,
+          longitude: 121.5645
+        },
+        {
+          title: "Dushanbe",
+          latitude: 38.5737,
+          longitude: 68.7738
+        },
+        {
+          title: "Bangkok",
+          latitude: 13.7573,
+          longitude: 100.502
+        },
+        {
+          title: "Dili",
+          latitude: -8.5662,
+          longitude: 125.588
+        },
+        {
+          title: "Ankara",
+          latitude: 39.9439,
+          longitude: 32.856
+        },
+        {
+          title: "Ashgabat",
+          latitude: 37.9509,
+          longitude: 58.3794
+        },
+        {
+          title: "Abu Dhabi",
+          latitude: 24.4764,
+          longitude: 54.3705
+        },
+        {
+          title: "Tashkent",
+          latitude: 41.3193,
+          longitude: 69.2481
+        },
+        {
+          title: "Hanoi",
+          latitude: 21.0341,
+          longitude: 105.8372
+        },
+        {
+          title: "Sanaa",
+          latitude: 15.3556,
+          longitude: 44.2081
+        },
+        {
+          title: "Buenos Aires",
+          latitude: -34.6118,
+          longitude: -58.4173
+        },
+        {
+          title: "Bridgetown",
+          latitude: 13.0935,
+          longitude: -59.6105
+        },
+        {
+          title: "Belmopan",
+          latitude: 17.2534,
+          longitude: -88.7713
+        },
+        {
+          title: "Sucre",
+          latitude: -19.0421,
+          longitude: -65.2559
+        },
+        {
+          title: "Brasilia",
+          latitude: -15.7801,
+          longitude: -47.9292
+        },
+        {
+          title: "Ottawa",
+          latitude: 45.4235,
+          longitude: -75.6979
+        },
+        {
+          title: "Santiago",
+          latitude: -33.4691,
+          longitude: -70.642
+        },
+        {
+          title: "Bogota",
+          latitude: 4.6473,
+          longitude: -74.0962
+        },
+        {
+          title: "San Jose",
+          latitude: 9.9402,
+          longitude: -84.1002
+        },
+        {
+          title: "Havana",
+          latitude: 23.1333,
+          longitude: -82.3667
+        },
+        {
+          title: "Roseau",
+          latitude: 15.2976,
+          longitude: -61.39
+        },
+        {
+          title: "Santo Domingo",
+          latitude: 18.479,
+          longitude: -69.8908
+        },
+        {
+          title: "Quito",
+          latitude: -0.2295,
+          longitude: -78.5243
+        },
+        {
+          title: "San Salvador",
+          latitude: 13.7034,
+          longitude: -89.2073
+        },
+        {
+          title: "Guatemala",
+          latitude: 14.6248,
+          longitude: -90.5328
+        },
+        {
+          title: "Ciudad de Mexico",
+          latitude: 19.4271,
+          longitude: -99.1276
+        },
+        {
+          title: "Managua",
+          latitude: 12.1475,
+          longitude: -86.2734
+        },
+        {
+          title: "Panama",
+          latitude: 8.9943,
+          longitude: -79.5188
+        },
+        {
+          title: "Asuncion",
+          latitude: -25.3005,
+          longitude: -57.6362
+        },
+        {
+          title: "Lima",
+          latitude: -12.0931,
+          longitude: -77.0465
+        },
+        {
+          title: "Castries",
+          latitude: 13.9972,
+          longitude: -60.0018
+        },
+        {
+          title: "Paramaribo",
+          latitude: 5.8232,
+          longitude: -55.1679
+        },
+        {
+          title: "Washington D.C.",
+          latitude: 38.8921,
+          longitude: -77.0241
+        },
+        {
+          title: "Montevideo",
+          latitude: -34.8941,
+          longitude: -56.0675
+        },
+        {
+          title: "Caracas",
+          latitude: 10.4961,
+          longitude: -66.8983
+        },
+        {
+          title: "Oranjestad",
+          latitude: 12.5246,
+          longitude: -70.0265
+        },
+        {
+          title: "Cayenne",
+          latitude: 4.9346,
+          longitude: -52.3303
+        },
+        {
+          title: "Plymouth",
+          latitude: 16.6802,
+          longitude: -62.2014
+        },
+        {
+          title: "San Juan",
+          latitude: 18.45,
+          longitude: -66.0667
+        },
+        {
+          title: "Algiers",
+          latitude: 36.7755,
+          longitude: 3.0597
+        },
+        {
+          title: "Luanda",
+          latitude: -8.8159,
+          longitude: 13.2306
+        },
+        {
+          title: "Porto-Novo",
+          latitude: 6.4779,
+          longitude: 2.6323
+        },
+        {
+          title: "Gaborone",
+          latitude: -24.657,
+          longitude: 25.9089
+        },
+        {
+          title: "Ouagadougou",
+          latitude: 12.3569,
+          longitude: -1.5352
+        },
+        {
+          title: "Bujumbura",
+          latitude: -3.3818,
+          longitude: 29.3622
+        },
+        {
+          title: "Yaounde",
+          latitude: 3.8612,
+          longitude: 11.5217
+        },
+        {
+          title: "Bangui",
+          latitude: 4.3621,
+          longitude: 18.5873
+        },
+        {
+          title: "Brazzaville",
+          latitude: -4.2767,
+          longitude: 15.2662
+        },
+        {
+          title: "Kinshasa",
+          latitude: -4.3369,
+          longitude: 15.3271
+        },
+        {
+          title: "Yamoussoukro",
+          latitude: 6.8067,
+          longitude: -5.2728
+        },
+        {
+          title: "Djibouti",
+          latitude: 11.5806,
+          longitude: 43.1425
+        },
+        {
+          title: "Cairo",
+          latitude: 30.0571,
+          longitude: 31.2272
+        },
+        {
+          title: "Asmara",
+          latitude: 15.3315,
+          longitude: 38.9183
+        },
+        {
+          title: "Addis Abeba",
+          latitude: 9.0084,
+          longitude: 38.7575
+        },
+        {
+          title: "Libreville",
+          latitude: 0.3858,
+          longitude: 9.4496
+        },
+        {
+          title: "Banjul",
+          latitude: 13.4399,
+          longitude: -16.6775
+        },
+        {
+          title: "Accra",
+          latitude: 5.5401,
+          longitude: -0.2074
+        },
+        {
+          title: "Conakry",
+          latitude: 9.537,
+          longitude: -13.6785
+        },
+        {
+          title: "Bissau",
+          latitude: 11.8598,
+          longitude: -15.5875
+        },
+        {
+          title: "Nairobi",
+          latitude: -1.2762,
+          longitude: 36.7965
+        },
+        {
+          title: "Maseru",
+          latitude: -29.2976,
+          longitude: 27.4854
+        },
+        {
+          title: "Monrovia",
+          latitude: 6.3106,
+          longitude: -10.8047
+        },
+        {
+          title: "Tripoli",
+          latitude: 32.883,
+          longitude: 13.1897
+        },
+        {
+          title: "Antananarivo",
+          latitude: -18.9201,
+          longitude: 47.5237
+        },
+        {
+          title: "Lilongwe",
+          latitude: -13.9899,
+          longitude: 33.7703
+        },
+        {
+          title: "Bamako",
+          latitude: 12.653,
+          longitude: -7.9864
+        },
+        {
+          title: "Nouakchott",
+          latitude: 18.0669,
+          longitude: -15.99
+        },
+        {
+          title: "Port Louis",
+          latitude: -20.1654,
+          longitude: 57.4896
+        },
+        {
+          title: "Rabat",
+          latitude: 33.9905,
+          longitude: -6.8704
+        },
+        {
+          title: "Maputo",
+          latitude: -25.9686,
+          longitude: 32.5804
+        },
+        {
+          title: "Windhoek",
+          latitude: -22.5749,
+          longitude: 17.0805
+        },
+        {
+          title: "Niamey",
+          latitude: 13.5164,
+          longitude: 2.1157
+        },
+        {
+          title: "Abuja",
+          latitude: 9.058,
+          longitude: 7.4891
+        },
+        {
+          title: "Kigali",
+          latitude: -1.9441,
+          longitude: 30.0619
+        },
+        {
+          title: "Dakar",
+          latitude: 14.6953,
+          longitude: -17.4439
+        },
+        {
+          title: "Freetown",
+          latitude: 8.4697,
+          longitude: -13.2659
+        },
+        {
+          title: "Mogadishu",
+          latitude: 2.0411,
+          longitude: 45.3426
+        },
+        {
+          title: "Pretoria",
+          latitude: -25.7463,
+          longitude: 28.1876
+        },
+        {
+          title: "Mbabane",
+          latitude: -26.3186,
+          longitude: 31.141
+        },
+        {
+          title: "Dodoma",
+          latitude: -6.167,
+          longitude: 35.7497
+        },
+        {
+          title: "Lome",
+          latitude: 6.1228,
+          longitude: 1.2255
+        },
+        {
+          title: "Tunis",
+          latitude: 36.8117,
+          longitude: 10.1761
+        }
+      ];
+
+      for (var i = 0; i < cities.length; i++) {
+        var city = cities[i];
+        addCity(city.longitude, city.latitude, city.title);
+      }
+
+      function addCity(longitude, latitude, title) {
+        pointSeries.data.push({
+          geometry: { type: "Point", coordinates: [longitude, latitude] },
+          title: title
+        });
+      }
+
+      // Make stuff animate on load
+      chart.appear(1000, 100);
+
+
+    }); // end am5.ready()
+  </script>
+  <!-- ==============================================Widget chart================================================= -->
+  <script>
+
+
+    var options = {
+      series: [{
+        name: 'series1',
+        data: [31, 40, 28, 51, 42, 109, 100]
+      }, {
+        name: 'series2',
+        data: [11, 32, 45, 32, 34, 52, 41]
+      }],
+      chart: {
+        height: 350,
+        type: 'area'
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: 'smooth'
+      },
+      xaxis: {
+        type: 'datetime',
+        categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+      },
+      tooltip: {
+        x: {
+          format: 'dd/MM/yy HH:mm'
+        },
+      },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#dash3"), options);
+    chart.render();
+    var options = {
+      series: [{
+        data: [
+          [1327359600000, 30.95],
+          [1327446000000, 31.34],
+          [1327532400000, 31.18],
+          [1327618800000, 31.05],
+          [1327878000000, 31.00],
+          [1327964400000, 30.95],
+          [1328050800000, 31.24],
+          [1328137200000, 31.29],
+          [1328223600000, 31.85],
+          [1328482800000, 31.86],
+          [1328569200000, 32.28],
+          [1328655600000, 32.10],
+          [1328742000000, 32.65],
+          [1328828400000, 32.21],
+          [1329087600000, 32.35],
+          [1329174000000, 32.44],
+          [1329260400000, 32.46],
+          [1329346800000, 32.86],
+          [1329433200000, 32.75],
+          [1329778800000, 32.54],
+          [1329865200000, 32.33],
+          [1329951600000, 32.97],
+          [1330038000000, 33.41],
+          [1330297200000, 33.27],
+          [1330383600000, 33.27],
+          [1330470000000, 32.89],
+          [1330556400000, 33.10],
+          [1330642800000, 33.73],
+          [1330902000000, 33.22],
+          [1330988400000, 31.99],
+          [1331074800000, 32.41],
+          [1331161200000, 33.05],
+          [1331247600000, 33.64],
+          [1331506800000, 33.56],
+          [1331593200000, 34.22],
+          [1331679600000, 33.77],
+          [1331766000000, 34.17],
+          [1331852400000, 33.82],
+          [1332111600000, 34.51],
+          [1332198000000, 33.16],
+          [1332284400000, 33.56],
+          [1332370800000, 33.71],
+          [1332457200000, 33.81],
+          [1332712800000, 34.40],
+          [1332799200000, 34.63],
+          [1332885600000, 34.46],
+          [1332972000000, 34.48],
+          [1333058400000, 34.31],
+          [1333317600000, 34.70],
+          [1333404000000, 34.31],
+          [1333490400000, 33.46],
+          [1333576800000, 33.59],
+          [1333922400000, 33.22],
+          [1334008800000, 32.61],
+          [1334095200000, 33.01],
+          [1334181600000, 33.55],
+          [1334268000000, 33.18],
+          [1334527200000, 32.84],
+          [1334613600000, 33.84],
+          [1334700000000, 33.39],
+          [1334786400000, 32.91],
+          [1334872800000, 33.06],
+          [1335132000000, 32.62],
+          [1335218400000, 32.40],
+          [1335304800000, 33.13],
+          [1335391200000, 33.26],
+          [1335477600000, 33.58],
+          [1335736800000, 33.55],
+          [1335823200000, 33.77],
+          [1335909600000, 33.76],
+          [1335996000000, 33.32],
+          [1336082400000, 32.61],
+          [1336341600000, 32.52],
+          [1336428000000, 32.67],
+          [1336514400000, 32.52],
+          [1336600800000, 31.92],
+          [1336687200000, 32.20],
+          [1336946400000, 32.23],
+          [1337032800000, 32.33],
+          [1337119200000, 32.36],
+          [1337205600000, 32.01],
+          [1337292000000, 31.31],
+          [1337551200000, 32.01],
+          [1337637600000, 32.01],
+          [1337724000000, 32.18],
+          [1337810400000, 31.54],
+          [1337896800000, 31.60],
+          [1338242400000, 32.05],
+          [1338328800000, 31.29],
+          [1338415200000, 31.05],
+          [1338501600000, 29.82],
+          [1338760800000, 30.31],
+          [1338847200000, 30.70],
+          [1338933600000, 31.69],
+          [1339020000000, 31.32],
+          [1339106400000, 31.65],
+          [1339365600000, 31.13],
+          [1339452000000, 31.77],
+          [1339538400000, 31.79],
+          [1339624800000, 31.67],
+          [1339711200000, 32.39],
+          [1339970400000, 32.63],
+          [1340056800000, 32.89],
+          [1340143200000, 31.99],
+          [1340229600000, 31.23],
+          [1340316000000, 31.57],
+          [1340575200000, 30.84],
+          [1340661600000, 31.07],
+          [1340748000000, 31.41],
+          [1340834400000, 31.17],
+          [1340920800000, 32.37],
+          [1341180000000, 32.19],
+          [1341266400000, 32.51],
+          [1341439200000, 32.53],
+          [1341525600000, 31.37],
+          [1341784800000, 30.43],
+          [1341871200000, 30.44],
+          [1341957600000, 30.20],
+          [1342044000000, 30.14],
+          [1342130400000, 30.65],
+          [1342389600000, 30.40],
+          [1342476000000, 30.65],
+          [1342562400000, 31.43],
+          [1342648800000, 31.89],
+          [1342735200000, 31.38],
+          [1342994400000, 30.64],
+          [1343080800000, 30.02],
+          [1343167200000, 30.33],
+          [1343253600000, 30.95],
+          [1343340000000, 31.89],
+          [1343599200000, 31.01],
+          [1343685600000, 30.88],
+          [1343772000000, 30.69],
+          [1343858400000, 30.58],
+          [1343944800000, 32.02],
+          [1344204000000, 32.14],
+          [1344290400000, 32.37],
+          [1344376800000, 32.51],
+          [1344463200000, 32.65],
+          [1344549600000, 32.64],
+          [1344808800000, 32.27],
+          [1344895200000, 32.10],
+          [1344981600000, 32.91],
+          [1345068000000, 33.65],
+          [1345154400000, 33.80],
+          [1345413600000, 33.92],
+          [1345500000000, 33.75],
+          [1345586400000, 33.84],
+          [1345672800000, 33.50],
+          [1345759200000, 32.26],
+          [1346018400000, 32.32],
+          [1346104800000, 32.06],
+          [1346191200000, 31.96],
+          [1346277600000, 31.46],
+          [1346364000000, 31.27],
+          [1346709600000, 31.43],
+          [1346796000000, 32.26],
+          [1346882400000, 32.79],
+          [1346968800000, 32.46],
+          [1347228000000, 32.13],
+          [1347314400000, 32.43],
+          [1347400800000, 32.42],
+          [1347487200000, 32.81],
+          [1347573600000, 33.34],
+          [1347832800000, 33.41],
+          [1347919200000, 32.57],
+          [1348005600000, 33.12],
+          [1348092000000, 34.53],
+          [1348178400000, 33.83],
+          [1348437600000, 33.41],
+          [1348524000000, 32.90],
+          [1348610400000, 32.53],
+          [1348696800000, 32.80],
+          [1348783200000, 32.44],
+          [1349042400000, 32.62],
+          [1349128800000, 32.57],
+          [1349215200000, 32.60],
+          [1349301600000, 32.68],
+          [1349388000000, 32.47],
+          [1349647200000, 32.23],
+          [1349733600000, 31.68],
+          [1349820000000, 31.51],
+          [1349906400000, 31.78],
+          [1349992800000, 31.94],
+          [1350252000000, 32.33],
+          [1350338400000, 33.24],
+          [1350424800000, 33.44],
+          [1350511200000, 33.48],
+          [1350597600000, 33.24],
+          [1350856800000, 33.49],
+          [1350943200000, 33.31],
+          [1351029600000, 33.36],
+          [1351116000000, 33.40],
+          [1351202400000, 34.01],
+          [1351638000000, 34.02],
+          [1351724400000, 34.36],
+          [1351810800000, 34.39],
+          [1352070000000, 34.24],
+          [1352156400000, 34.39],
+          [1352242800000, 33.47],
+          [1352329200000, 32.98],
+          [1352415600000, 32.90],
+          [1352674800000, 32.70],
+          [1352761200000, 32.54],
+          [1352847600000, 32.23],
+          [1352934000000, 32.64],
+          [1353020400000, 32.65],
+          [1353279600000, 32.92],
+          [1353366000000, 32.64],
+          [1353452400000, 32.84],
+          [1353625200000, 33.40],
+          [1353884400000, 33.30],
+          [1353970800000, 33.18],
+          [1354057200000, 33.88],
+          [1354143600000, 34.09],
+          [1354230000000, 34.61],
+          [1354489200000, 34.70],
+          [1354575600000, 35.30],
+          [1354662000000, 35.40],
+          [1354748400000, 35.14],
+          [1354834800000, 35.48],
+          [1355094000000, 35.75],
+          [1355180400000, 35.54],
+          [1355266800000, 35.96],
+          [1355353200000, 35.53],
+          [1355439600000, 37.56],
+          [1355698800000, 37.42],
+          [1355785200000, 37.49],
+          [1355871600000, 38.09],
+          [1355958000000, 37.87],
+          [1356044400000, 37.71],
+          [1356303600000, 37.53],
+          [1356476400000, 37.55],
+          [1356562800000, 37.30],
+          [1356649200000, 36.90],
+          [1356908400000, 37.68],
+          [1357081200000, 38.34],
+          [1357167600000, 37.75],
+          [1357254000000, 38.13],
+          [1357513200000, 37.94],
+          [1357599600000, 38.14],
+          [1357686000000, 38.66],
+          [1357772400000, 38.62],
+          [1357858800000, 38.09],
+          [1358118000000, 38.16],
+          [1358204400000, 38.15],
+          [1358290800000, 37.88],
+          [1358377200000, 37.73],
+          [1358463600000, 37.98],
+          [1358809200000, 37.95],
+          [1358895600000, 38.25],
+          [1358982000000, 38.10],
+          [1359068400000, 38.32],
+          [1359327600000, 38.24],
+          [1359414000000, 38.52],
+          [1359500400000, 37.94],
+          [1359586800000, 37.83],
+          [1359673200000, 38.34],
+          [1359932400000, 38.10],
+          [1360018800000, 38.51],
+          [1360105200000, 38.40],
+          [1360191600000, 38.07],
+          [1360278000000, 39.12],
+          [1360537200000, 38.64],
+          [1360623600000, 38.89],
+          [1360710000000, 38.81],
+          [1360796400000, 38.61],
+          [1360882800000, 38.63],
+          [1361228400000, 38.99],
+          [1361314800000, 38.77],
+          [1361401200000, 38.34],
+          [1361487600000, 38.55],
+          [1361746800000, 38.11],
+          [1361833200000, 38.59],
+          [1361919600000, 39.60],
+        ]
+      }],
+      chart: {
+        id: 'area-datetime',
+        type: 'area',
+        height: 350,
+        zoom: {
+          autoScaleYaxis: true
+        }
+      },
+      annotations: {
+        yaxis: [{
+          y: 30,
+          borderColor: '#999',
+          label: {
+            show: true,
+            text: 'Support',
+            style: {
+              color: "#fff",
+              background: '#00E396'
+            }
+          }
+        }],
+        xaxis: [{
+          x: new Date('14 Nov 2012').getTime(),
+          borderColor: '#999',
+          yAxisIndex: 0,
+          label: {
+            show: true,
+            text: 'Rally',
+            style: {
+              color: "#fff",
+              background: '#775DD0'
+            }
+          }
+        }]
+      },
+      dataLabels: {
+        enabled: false
+      },
+      markers: {
+        size: 0,
+        style: 'hollow',
+      },
+      xaxis: {
+        type: 'datetime',
+        min: new Date('01 Mar 2012').getTime(),
+        tickAmount: 6,
+      },
+      tooltip: {
+        x: {
+          format: 'dd MMM yyyy'
+        }
+      },
+      fill: {
+        type: 'gradient',
+        gradient: {
+          shadeIntensity: 1,
+          opacityFrom: 0.7,
+          opacityTo: 0.9,
+          stops: [0, 100]
+        }
+      },
+    };
+
+    var chart = new ApexCharts(document.querySelector("#dash4"), options);
+    chart.render();
+
+
+    var resetCssClasses = function (activeEl) {
+      var els = document.querySelectorAll('button')
+      Array.prototype.forEach.call(els, function (el) {
+        el.classList.remove('active')
+      })
+
+      activeEl.target.classList.add('active')
+    }
+
+    document
+      .querySelector('#one_month')
+      .addEventListener('click', function (e) {
+        resetCssClasses(e)
+
+        chart.zoomX(
+          new Date('28 Jan 2013').getTime(),
+          new Date('27 Feb 2013').getTime()
+        )
+      })
+
+    document
+      .querySelector('#six_months')
+      .addEventListener('click', function (e) {
+        resetCssClasses(e)
+
+        chart.zoomX(
+          new Date('27 Sep 2012').getTime(),
+          new Date('27 Feb 2013').getTime()
+        )
+      })
+
+    document
+      .querySelector('#one_year')
+      .addEventListener('click', function (e) {
+        resetCssClasses(e)
+        chart.zoomX(
+          new Date('27 Feb 2012').getTime(),
+          new Date('27 Feb 2013').getTime()
+        )
+      })
+
+    document.querySelector('#ytd').addEventListener('click', function (e) {
+      resetCssClasses(e)
+
+      chart.zoomX(
+        new Date('01 Jan 2013').getTime(),
+        new Date('27 Feb 2013').getTime()
+      )
+    })
+
+    document.querySelector('#all').addEventListener('click', function (e) {
+      resetCssClasses(e)
+
+      chart.zoomX(
+        new Date('23 Jan 2012').getTime(),
+        new Date('27 Feb 2013').getTime()
+      )
+    })
+
+  </script>
+  <!-- =================================tab=============================== -->
+  <script>
+ var options = {
+      series: [{
+        name: 'Income',
+        type: 'column',
+        data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
+      }, {
+        name: 'Cashflow',
+        type: 'column',
+        data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5]
+      }, {
+        name: 'Revenue',
+        type: 'line',
+        data: [20, 29, 37, 36, 44, 45, 50, 58]
+      }],
+      chart: {
+        height: 350,
+        type: 'line',
+        stacked: false
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        width: [1, 1, 4]
+      },
+      title: {
+        text: 'XYZ - Stock Analysis (2009 - 2016)',
+        align: 'left',
+        offsetX: 110
+      },
+      xaxis: {
+        categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+      },
+      yaxis: [
+        {
+          seriesName: 'Income',
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: true,
+            color: '#008FFB'
+          },
+          labels: {
+            style: {
+              colors: '#008FFB',
+            }
+          },
+          title: {
+            text: "Income (thousand crores)",
+            style: {
+              color: '#008FFB',
+            }
+          },
+          tooltip: {
+            enabled: true
+          }
+        },
+        {
+          seriesName: 'Cashflow',
+          opposite: true,
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: true,
+            color: '#00E396'
+          },
+          labels: {
+            style: {
+              colors: '#00E396',
+            }
+          },
+          title: {
+            text: "Operating Cashflow (thousand crores)",
+            style: {
+              color: '#00E396',
+            }
+          },
+        },
+        {
+          seriesName: 'Revenue',
+          opposite: true,
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: true,
+            color: '#FEB019'
+          },
+          labels: {
+            style: {
+              colors: '#FEB019',
+            },
+          },
+          title: {
+            text: "Revenue (thousand crores)",
+            style: {
+              color: '#FEB019',
+            }
+          }
+        },
+      ],
+      tooltip: {
+        fixed: {
+          enabled: true,
+          position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+          offsetY: 30,
+          offsetX: 60
+        },
+      },
+      legend: {
+        horizontalAlign: 'left',
+        offsetX: 40
+      }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#dash5"), options);
+    chart.render();
+    var options = {
+      series: [
+        {
+          name: "High - 2013",
+          data: [28, 29, 33, 36, 32, 32, 33]
+        },
+        {
+          name: "Low - 2013",
+          data: [12, 11, 14, 18, 17, 13, 13]
+        }
+      ],
+      chart: {
+        height: 350,
+        type: 'line',
+        dropShadow: {
+          enabled: true,
+          color: '#000',
+          top: 18,
+          left: 7,
+          blur: 10,
+          opacity: 0.2
+        },
+        zoom: {
+          enabled: false
+        },
+        toolbar: {
+          show: false
+        }
+      },
+      colors: ['#77B6EA', '#545454'],
+      dataLabels: {
+        enabled: true,
+      },
+      stroke: {
+        curve: 'smooth'
+      },
+      title: {
+        text: 'Average High & Low Temperature',
+        align: 'left'
+      },
+      grid: {
+        borderColor: '#e7e7e7',
+        row: {
+          colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+          opacity: 0.5
+        },
+      },
+      markers: {
+        size: 1
+      },
+      xaxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        title: {
+          text: 'Month'
+        }
+      },
+      yaxis: {
+        title: {
+          text: 'Temperature'
+        },
+        min: 5,
+        max: 40
+      },
+      legend: {
+        position: 'top',
+        horizontalAlign: 'right',
+        floating: true,
+        offsetY: -25,
+        offsetX: -5
+      }
+    };
+    var chart = new ApexCharts(document.querySelector("#dash6"), options);
+    chart.render();
+  </script>
+</body>
+</html>

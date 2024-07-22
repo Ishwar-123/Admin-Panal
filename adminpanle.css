@@ -1,0 +1,1494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.sidebar {
+    width: 10%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    background-image: url("img2.jfif");
+}
+
+nav {
+    width: 90%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    left: 10%;
+    z-index: 1000;
+    background-image: url("img1.jpg");
+    display: flex;
+}
+
+.content {
+    width: 90%;
+    height: 110vh;
+    left: 10%;
+    position: absolute;
+
+}
+
+.one {
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img2.jfif");
+    animation: one 1s infinite;
+}
+
+@keyframes one {
+    0% {
+        color: aqua;
+    }
+
+    25% {
+        color: chocolate;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    75% {
+        color: snow;
+    }
+
+    100% {
+        color: orange;
+    }
+}
+
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten,
+.eleven {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.two i,
+.five i,
+.eight i {
+    transform: rotate(180deg);
+    margin-left: 5px;
+}
+
+.one1 {
+    width: 115px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.two2 {
+    width: 300px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.two2 img {
+    width: 350px;
+    height: 75px;
+}
+
+.three3 {
+    width: 70px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 900px;
+}
+
+.four4 {
+    width: 70px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.five5 {
+    width: 70px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.six6 {
+    width: 200px;
+    height: inherit;
+    background-color: #ff5722;
+    display: flex;
+}
+
+.part1 {
+    width: 30%;
+    height: 53px;
+    border-radius: 50%;
+    background-image: url("user.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.part2 a {
+    text-decoration: none;
+    margin-left: 13px;
+    font-size: 15px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.op {
+    width: 100%;
+    height: 100px;
+    background-color: #214162;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.op1 {
+    width: 30%;
+    height: 53px;
+    border-radius: 50%;
+    background-image: url("user.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.op2 {
+    margin-left: 10px;
+}
+
+.op3 {
+    font-size: 17px;
+    color: white;
+}
+
+.op4 {
+    color: #63E6BE;
+}
+
+.op4 i {
+    animation: two 1s infinite;
+    margin-right: 5px;
+}
+
+@keyframes two {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.part2 i {
+    transform: rotate(180deg);
+    margin-left: 5px;
+}
+
+.BACK {
+    width: 100%;
+    height: 1.5px;
+    background-color: #ff5722;
+}
+
+.dechboard1 {
+    height: 80px;
+    width: 95%;
+    background-color: white;
+    margin-left: 5%;
+    display: none;
+    z-index: 1000;
+
+}
+
+.dechboard2 {
+    height: 80px;
+    width: 95%;
+    background-color: yellow;
+    margin-left: 5%;
+    display: none;
+    z-index: 1000;
+}
+
+
+.dechboard3 {
+    height: 80px;
+    width: 95%;
+    background-color: orange;
+    margin-left: 5%;
+    display: none;
+    z-index: 1000;
+}
+
+.db1,
+.db2,
+.db3,
+.db4,
+.db5,
+.db6 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    opacity: .4;
+    cursor: pointer;
+}
+
+.db1 i,
+.db2 i,
+.db3 i,
+.db4 i,
+.db5 i,
+.db6 i {
+    transform: rotate(90deg);
+}
+
+.db1:hover,
+.db2:hover,
+.db3:hover,
+.db4:hover,
+.db5:hover,
+.db6:hover {
+    margin-left: 18px;
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+.content {
+    font-size: 20px;
+
+}
+
+.content2 {
+    width: 90%;
+    height: 110vh;
+    left: 10%;
+    position: absolute;
+    display: none;
+}
+
+iframe {
+    height: inherit;
+    width: inherit;
+}
+
+.content3 {
+    width: 90%;
+    height: 100vh;
+    left: 10%;
+    position: absolute;
+    display: none;
+}
+
+.content4 {
+    width: 90%;
+    height: 100vh;
+    background-color: #ff5722;
+    left: 10%;
+    position: absolute;
+    display: none;
+}
+
+.content5 {
+    width: 90%;
+    height: 100vh;
+    left: 10%;
+    position: absolute;
+    display: none;
+    padding: 100px;
+    padding-top: 150px;
+}
+
+#calender {
+    height: 60vh;
+    width: 100%;
+}
+
+.content6 {
+    width: 90%;
+    height: 100vh;
+    background-color: black;
+    left: 10%;
+    position: absolute;
+    display: none;
+}
+
+#chartdiv {
+    height: inherit;
+    width: 100%;
+}
+
+.content7 {
+    width: 90%;
+    height: 100vh;
+    left: 10%;
+    position: absolute;
+    display: none;
+}
+
+
+.dechboard11 i {
+    margin-left: -5px;
+}
+
+i {
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 70px;
+
+}
+
+.content2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 70px;
+}
+
+.content3 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 70px;
+}
+
+#dash1,
+#dash2 {
+    width: 90%;
+    height: 395px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#dash3,
+#dash4 {
+    width: 90%;
+    height: 395px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#dash5,
+#dash6 {
+    width: 90%;
+    height: 395px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+#dash1,
+#dash3 {
+    margin-bottom: 70px;
+
+}
+
+#dash2,
+#dash4 {
+    margin-bottom: 70px;
+}
+
+#dash5,
+#dash6 {
+    margin-bottom: 70px;
+
+}
+
+#chartdiv {
+    width: 100%;
+    height: inherit;
+}
+
+#wid {
+    width: 100%;
+    height: inherit;
+}
+
+@media (min-width:320px) and (max-width:480px) {
+    .main {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .sidebar {
+        width: 25%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1000;
+        background-image: url("img2.jfif");
+    }
+
+    nav {
+        width: 75%;
+        height: 70px;
+        position: sticky;
+        top: 0;
+        left: 25%;
+        z-index: 1000;
+        background-image: url("img1.jpg");
+        display: flex;
+    }
+
+    .one1 i {
+        height: 5px;
+        width: 5px;
+        font-size: 20px;
+    }
+
+    .content {
+        width: 90%;
+        height: 98vh;
+        left: 10%;
+        position: absolute;
+
+    }
+
+    .one {
+        width: 100%;
+        height: 50px;
+        padding: 20px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("img2.jfif");
+        animation: one 1s infinite;
+    }
+
+    @keyframes one {
+        0% {
+            color: aqua;
+        }
+
+        25% {
+            color: chocolate;
+        }
+
+        50% {
+            color: yellow;
+        }
+
+        75% {
+            color: snow;
+        }
+
+        100% {
+            color: orange;
+        }
+    }
+
+    .two,
+    .three,
+    .four,
+    .five,
+    .six,
+    .seven,
+    .eight,
+    .nine,
+    .ten,
+    .eleven {
+        width: 100%;
+        height: 50px;
+        padding: 5px;
+        font-size: 15px;
+        color: white;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .two button,
+    .five button,
+    .eight button {
+        font-size: 15px;
+    }
+
+    .two i,
+    .five i,
+    .eight i {
+        transform: rotate(180deg);
+        margin-left: 5px;
+        font-size: 11px;
+    }
+
+    .one1 {
+        width: 90px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .one1 {
+        margin-left: -10px;
+    }
+
+    .two2 {
+        width: 300px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .two2 img {
+        width: 85px;
+        height: 28px;
+        margin-left: -25px;
+    }
+
+    .three3 {
+        width: 70px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: -30px;
+    }
+
+    .three3 i,
+    .four4 i,
+    .five5 i {
+        font-size: 20px;
+    }
+
+    .four4 {
+        width: 70px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .five5 {
+        width: 70px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+    }
+
+    .six6 {
+        width: 200px;
+        height: inherit;
+        background-color: #ff5722;
+        display: flex;
+    }
+
+    .part1 {
+        width: 27%;
+        height: 25px;
+        border-radius: 50%;
+        background-image: url("user.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-top: 23px;
+        margin-left: 5px;
+    }
+
+    .part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 63px;
+
+    }
+
+
+    .part2 a {
+        text-decoration: none;
+        margin-left: 13px;
+        font-size: 13px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .op {
+        width: 100%;
+        height: 70px;
+        background-color: #214162;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .op1 {
+        width: 39%;
+        height: 53px;
+        border-radius: 50%;
+        background-image: url("user.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: 2px;
+    }
+
+    .op2 {
+        margin-left: 10px;
+    }
+
+    .op3 {
+        font-size: 13px;
+        color: white;
+        margin-left: -5px;
+    }
+
+    .op4 {
+        color: #63E6BE;
+        font-size: 12px;
+        margin-left: -5px;
+    }
+
+    .op4 i {
+        animation: two 1s infinite;
+        margin-right: 5px;
+
+    }
+
+    @keyframes two {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .part2 i {
+        transform: rotate(180deg);
+        margin-left: 5px;
+    }
+
+    .BACK {
+        width: 100%;
+        height: 1.5px;
+        background-color: #ff5722;
+    }
+
+    .dechboard1 {
+        height: 60px;
+        width: 95%;
+        background-color: white;
+        margin-left: 5%;
+        display: none;
+        z-index: 1000;
+
+    }
+
+    .dechboard2 {
+        height: 60px;
+        width: 95%;
+        background-color: yellow;
+        margin-left: 5%;
+        display: none;
+        z-index: 1000;
+    }
+
+
+    .dechboard3 {
+        height: 60px;
+        width: 95%;
+        background-color: orange;
+        margin-left: 5%;
+        display: none;
+        z-index: 1000;
+    }
+
+    .db1,
+    .db2,
+    .db3,
+    .db4,
+    .db5,
+    .db6 {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-weight: 600;
+        font-size: 10px;
+        opacity: .4;
+        cursor: pointer;
+    }
+
+    .db1 i,
+    .db2 i,
+    .db3 i,
+    .db4 i,
+    .db5 i,
+    .db6 i {
+        transform: rotate(90deg);
+    }
+
+    .db1:hover,
+    .db2:hover,
+    .db3:hover,
+    .db4:hover,
+    .db5:hover,
+    .db6:hover {
+        margin-left: 0px;
+        opacity: 1;
+        transition-duration: .5s;
+    }
+
+    .content {
+        font-size: 20px;
+
+    }
+
+    .content2 {
+        width: 90%;
+        height: 98vh;
+        left: 10%;
+        position: absolute;
+        display: none;
+    }
+
+    iframe {
+        height: inherit;
+        width: inherit;
+    }
+
+    .content3 {
+        width: 90%;
+        height: 100vh;
+        left: 10%;
+        position: absolute;
+        display: none;
+    }
+
+    .content4 {
+        width: 90%;
+        height: 100vh;
+        background-color: #ff5722;
+        left: 10%;
+        position: absolute;
+        display: none;
+    }
+
+    .content5 {
+        width: 90%;
+        height: 100vh;
+        left: 10%;
+        position: absolute;
+        display: none;
+        padding: 0px;
+        padding-top: 20px;
+        background-color: orange;
+        padding-left: 85px;
+        padding-right: 20px;
+    }
+
+    #calender {
+        height: 60vh;
+        width: 100%;
+    }
+
+    .content6 {
+        width: 90%;
+        height: 100vh;
+        background-color: black;
+        left: 10%;
+        position: absolute;
+        display: none;
+        padding-left: 72px;
+        padding-top: 20px;
+    }
+
+    #chartdiv {
+        height: inherit;
+        width: 100%;
+    }
+
+    .content7 {
+        width: 90%;
+        height: 100vh;
+        left: 10%;
+        position: absolute;
+        display: none;
+    }
+
+
+    .dechboard11 i {
+        margin-left: -5px;
+    }
+
+    i {
+        cursor: pointer;
+    }
+
+    button {
+        background-color: transparent;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-left: 71px;
+
+    }
+
+    .content2 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-left: 71px;
+
+    }
+
+    .content3 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 20px;
+        padding-left: 71px;
+
+    }
+
+    #dash1,
+    #dash2 {
+        width: 90%;
+        height: 395px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #dash3,
+    #dash4 {
+        width: 90%;
+        height: 395px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #dash5,
+    #dash6 {
+        width: 90%;
+        height: 395px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+
+    #dash1,
+    #dash3 {
+        margin-bottom: 20px;
+
+    }
+
+    #dash2,
+    #dash4 {
+        margin-bottom: 20px;
+    }
+
+    #dash5,
+    #dash6 {
+        margin-bottom: 20px;
+
+    }
+
+    #chartdiv {
+        width: 100%;
+        height: inherit;
+    }
+
+    #wid {
+        width: 100%;
+        height: inherit;
+    }
+}
+
+@media (min-width:481px) and (max-width:768px) {
+    .main {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .sidebar {
+        width: 20%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1000;
+        background-image: url("img2.jfif");
+    }
+
+    nav {
+        width: 80%;
+        height: 10vh;
+        position: sticky;
+        top: 0;
+        left: 20%;
+        z-index: 1000;
+        background-image: url("img1.jpg");
+        display: flex;
+    }
+
+    .content {
+        width: 80%;
+        height: 100vh;
+        left: 20%;
+        position: absolute;
+
+    }
+
+    .one {
+        width: 100%;
+        height: 70px;
+        padding: 20px;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("img2.jfif");
+        animation: one 1s infinite;
+    }
+
+    @keyframes one {
+        0% {
+            color: aqua;
+        }
+
+        25% {
+            color: chocolate;
+        }
+
+        50% {
+            color: yellow;
+        }
+
+        75% {
+            color: snow;
+        }
+
+        100% {
+            color: orange;
+        }
+    }
+
+    .two,
+    .three,
+    .four,
+    .five,
+    .six,
+    .seven,
+    .eight,
+    .nine,
+    .ten,
+    .eleven {
+        width: 100%;
+        height: 60px;
+        padding: 10px;
+        font-size: 20px;
+        color: white;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .two i,
+    .five i,
+    .eight i {
+        transform: rotate(180deg);
+        margin-left: 5px;
+    }
+
+    .one1 {
+        width: 80px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .one1 i {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+
+
+    .two2 {
+        width: 300px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .two2 img {
+        width: 200px;
+        height: 50px;
+        margin-left: -20px;
+    }
+
+    .three3 {
+        width: 50px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+
+    }
+
+    .three3,
+    .four4,
+    .five5 {
+        font-size: 14px;
+
+    }
+
+    .four4 {
+        width: 50px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .five5 {
+        width: 50px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+    }
+
+    .six6 {
+        width: 200px;
+        height: inherit;
+        background-color: #ff5722;
+        display: flex;
+    }
+
+    .part1 {
+        width: 30%;
+        height: 43px;
+        border-radius: 50%;
+        background-image: url("user.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+
+    .part2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+    }
+
+    .part2 a {
+        text-decoration: none;
+        margin-left: 0px;
+        font-size: 13px;
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .part2 i{
+        font-size: 10px;
+    }
+    .op {
+        width: 100%;
+        height: 90px;
+        background-color: #214162;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .op1 {
+        width: 30%;
+        height: 53px;
+        border-radius: 50%;
+        background-image: url("user.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .op2 {
+        margin-left: 10px;
+    }
+
+    .op3 {
+        font-size: 17px;
+        color: white;
+    }
+
+    .op4 {
+        color: #63E6BE;
+    }
+
+    .op4 i {
+        animation: two 1s infinite;
+        margin-right: 5px;
+    }
+
+    @keyframes two {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .part2 i {
+        transform: rotate(180deg);
+        margin-left: 5px;
+    }
+
+    .BACK {
+        width: 100%;
+        height: 1.5px;
+        background-color: #ff5722;
+    }
+
+    .dechboard1 {
+        height: 80px;
+        width: 95%;
+        background-color: white;
+        margin-left: 5%;
+        display: none;
+        z-index: 1000;
+
+    }
+
+    .dechboard2 {
+        height: 80px;
+        width: 95%;
+        background-color: yellow;
+        margin-left: 5%;
+        display: none;
+        z-index: 1000;
+    }
+
+
+    .dechboard3 {
+        height: 80px;
+        width: 95%;
+        background-color: orange;
+        margin-left: 5%;
+        display: none;
+        z-index: 1000;
+    }
+
+    .db1,
+    .db2,
+    .db3,
+    .db4,
+    .db5,
+    .db6 {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-weight: 600;
+        font-size: 13px;
+        opacity: .4;
+        cursor: pointer;
+    }
+
+    .db1 i,
+    .db2 i,
+    .db3 i,
+    .db4 i,
+    .db5 i,
+    .db6 i {
+        transform: rotate(90deg);
+    }
+
+    .db1:hover,
+    .db2:hover,
+    .db3:hover,
+    .db4:hover,
+    .db5:hover,
+    .db6:hover {
+        margin-left: 18px;
+        opacity: 1;
+        transition-duration: .5s;
+    }
+
+    .content {
+        font-size: 20px;
+
+    }
+
+    .content2 {
+        width: 80%;
+        height: 100vh;
+        left: 20%;
+        position: absolute;
+        display: none;
+    }
+
+    iframe {
+        height: inherit;
+        width: inherit;
+    }
+
+    .content3 {
+        width: 80%;
+        height: 100vh;
+        left: 20%;
+        position: absolute;
+        display: none;
+    }
+
+    .content4 {
+        width: 80%;
+        height: 100vh;
+        background-color: #ff5722;
+        left: 20%;
+        position: absolute;
+        display: none;
+    }
+
+    .content5 {
+        width: 80%;
+        height: 100vh;
+        left: 20%;
+        position: absolute;
+        display: none;
+        padding: 10px;
+        padding-top: 0px;
+        background-color: orange;
+        padding-top: 50px;
+    }
+
+    #calender {
+        height: 60vh;
+        width: 100%;
+    }
+
+    .content6 {
+        width: 80%;
+        height: 110vh;
+        background-color: black;
+        left: 20%;
+        position: absolute;
+        display: none;
+        padding-top: 90px;
+    }
+
+    #chartdiv {
+        height: inherit;
+        width: 100%;
+    }
+
+    .content7 {
+        width: 80%;
+        height: 100vh;
+        left: 20%;
+        position: absolute;
+        display: none;
+    }
+
+
+    .dechboard11 i {
+        margin-left: -5px;
+    }
+
+    i {
+        cursor: pointer;
+    }
+
+    button {
+        background-color: transparent;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 30px;
+
+    }
+
+    .content2 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 30px;
+    }
+
+    .content3 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 30px;
+    }
+
+    #dash1,
+    #dash2 {
+        width: 90%;
+        height: 395px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #dash3,
+    #dash4 {
+        width: 90%;
+        height: 395px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #dash5,
+    #dash6 {
+        width: 90%;
+        height: 395px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+
+    #dash1,
+    #dash3 {
+        margin-bottom: 30px;
+
+    }
+
+    #dash2,
+    #dash4 {
+        margin-bottom: 30px;
+    }
+
+    #dash5,
+    #dash6 {
+        margin-bottom: 30px;
+
+    }
+
+    #chartdiv {
+        width: 100%;
+        height: inherit;
+    }
+
+    #wid {
+        width: 100%;
+        height: inherit;
+    }
+}
